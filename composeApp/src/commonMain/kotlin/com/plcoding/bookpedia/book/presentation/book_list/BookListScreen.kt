@@ -223,7 +223,7 @@ fun BookListScreen(
                             1 -> {
                                 if (state.favoriteBooks.isEmpty()) {
                                     Text(
-                                        text = stringResource(Res.string.no_favorite_books),
+                                        text = stringResource(Res.string.no_search_results),
                                         textAlign = TextAlign.Center,
                                         style = MaterialTheme.typography.headlineSmall,
                                     )
