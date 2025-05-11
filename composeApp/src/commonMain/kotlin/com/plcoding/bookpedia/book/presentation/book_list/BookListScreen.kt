@@ -84,6 +84,13 @@ fun BookListScreen(
         searchResultsListState.animateScrollToItem(0)
     }
 
+    LaunchedEffect(state.selectedTabIndex) {
+        pagerState.animateScrollToPage(state.selectedTabIndex)
+    }
+
+    LaunchedEffect(pagerState.currentPage) {
+        onAction(BookListAction.OnTabSelected(pagerState.currentPage))
+    }
 
     Column(
         modifier = Modifier
@@ -187,7 +194,6 @@ fun BookListScreen(
                                                 text = state.errorMessage.asString(),
                                                 textAlign = TextAlign.Center,
                                                 style = MaterialTheme.typography.headlineSmall,
-                                                color = MaterialTheme.colorScheme.error
                                             )
                                         }
 
