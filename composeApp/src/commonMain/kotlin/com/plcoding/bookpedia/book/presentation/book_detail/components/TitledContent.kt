@@ -21,8 +21,6 @@ fun TitledContent(
             text = title,
             style = MaterialTheme.typography.titleSmall
         )
-
         content()
-
     }
 }
