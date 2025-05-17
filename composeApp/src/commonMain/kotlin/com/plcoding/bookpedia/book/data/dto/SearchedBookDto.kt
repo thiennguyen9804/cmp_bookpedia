@@ -6,11 +6,11 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class SearchedBookDto(
     @SerialName("key") val id: String,
-    val title: String,
-    @SerialName("languages") val languages: List<String>? = null,
-    @SerialName("cover_i") val coverAlternativeKe: Int? = null,
+    @SerialName("title") val title: String,
+    @SerialName("language") val languages: List<String>? = null,
+    @SerialName("cover_i") val coverAlternativeKey: Int? = null,
     @SerialName("author_key") val authorKeys: List<String>? = null,
-    @SerialName("author_name") val authorName: List<String>? = null,
+    @SerialName("author_name") val authorNames: List<String>? = null,
     @SerialName("cover_edition_key") val coverKey: String? = null,
     @SerialName("first_publish_year") val firstPublishYear: Int? = null,
     @SerialName("ratings_average") val ratingsAverage: Double? = null,
