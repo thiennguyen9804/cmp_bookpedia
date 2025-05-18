@@ -9,6 +9,7 @@ class BookApplication : Application() {
         super.onCreate()
         initKoin {
             androidContext(this@BookApplication)
+            // truyền context toàn cục
         }
     }
 }
